@@ -1,0 +1,10 @@
+name: house-price-prediction
+
+python_env: python_env.yaml
+
+entry_points:
+  main:
+    parameters:
+      test_size: {type: float, default: 0.2}
+      random_state: {type: int, default: 42}
+    command: "python src/train.py --test-size {test_size} --random-state {random_state}" 
